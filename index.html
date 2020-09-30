@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="belajar dom event">
+    <title>domevent</title>
+</head>
+<body>
+
+    <div class="modalMenu" id='modalMenu'>
+
+        <span class="material-icons closeIcon"onclick="closeModal()">close</span>
+
+        <a href="#Home" onclick= "closeModal()">Home</a>
+        <a href="#About" onclick= "closeModal()">About</a>
+        <a href="#Contact" onclick= "closeModal()">Contact</a>
+        <a href="#Showcase" onclick= "closeModal()">Showcase</a>
+    </div>
+
+    <nav class="navbar">
+        <h3 class="brand">ALDO</h3>
+        <span class="material-icons menuIcon" onclick="showModal()">menu_open</span>
+    </nav>
+        <main class="container">
+            
+            <section class="Home" id= 'Home'>
+                <img src="./aldo2.jpg" alt="Foto Saya Sendiri" class="homeImage">
+                
+                <h1 class="homeText">
+                     WEB Profile </br>  ALDO
+                </h1>
+
+
+            </section>
+
+            <section class="About" id='About'>
+                <span class="alertAbout"> Selamat datang di About Menu..</span> 
+                <h1 class="title">About</h1>
+                <span class="material-icons aboutIcon">perm_media</span>
+            </section>
+
+            <section class="Contact" id='Contact'>
+                <h1 class="title">Contact</h1>
+            </section>
+
+            <section class="Showcase" id='Showcase'>
+
+                <span class="material-icons rotateIcon">autorenew</span>
+            </section>
+
+
+        </main>
+        <script src="main.js"></script>
+</body>
+</html>

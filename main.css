@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: ghostwhite;
+    font-family: 'Pompiere', cursive;
+}
+
+.navbar{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10%;
+    background-color: #00e1ff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    font-size: 2.9rem;
+    z-index: 100;
+}
+
+.menuIcon{
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.modalMenu{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.500);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 200;
+}
+
+.closeIcon{
+
+    color: orange;
+    font-size: 2rem;
+    position: absolute;
+    top: 15vh;
+    right: 10%;
+}
+
+.closeIcon:hover{
+    color: orangered;
+    cursor: pointer;
+
+}
+
+.modalMenu a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+
+}
+
+.modalMenu a:hover{
+    color: orange;
+    font-size: 2.2rem;
+}
+
+.container{
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+}
+.container section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home{
+    /* background-image: url(https://picsum.photos/seed/41/900); */
+    background-color: black;
+    background-size: cover;
+    background-attachment: fixed;
+    gap: 40px;
+
+}
+
+.homeImage{
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 20px 20px 10px 200px;
+    border: 8px solid rgb(0, 217, 255);
+    animation-name: topToBottom;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+.homeText{
+    font-family: 'Bebas Neue';
+    font-size: 8rem;
+    color: rgb(0, 204, 255);
+    animation-name: topToBottom;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.About{
+    background-image: url(./Aldo0001.png);
+    background-size: cover;
+    background-attachment: fixed;
+    flex-direction: column;
+    justify-content: flex-start !important;
+
+}
+
+.aboutIcon{
+    font-size: 4rem;
+    color: rgba(0, 0, 0, 0.500);
+    position: center;
+
+}
+
+.Contact{
+    background-image: url(./Aa0001.png);
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.Showcase{
+    background-image: url(./ggg.png);
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.rotateIcon{
+    font-size: 4rem;
+    color: rgb(0, 217, 255);
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.alertAbout{
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0051ffa6;
+    color: white;
+    position: sticky;
+    top: 10vh;
+}
+
+@keyframes topToBottom{
+    from{
+        transform: translateY(20vh); 
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0vh);
+        opacity: 1;
+    }
+
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Yanone+Kaffeesatz&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Staatliches&family=Yanone+Kaffeesatz&display=swap');
+
 html {
     scroll-behavior: smooth;
 }
@@ -25,13 +29,17 @@ body{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 40px;
     background-color: #00e1ff;
     position: sticky;
     top: 0;
     left: 0;
     font-size: 2.9rem;
     z-index: 100;
+}
+
+.brand{
+    font-family: 'Pompiere';
 }
 
 .menuIcon{
@@ -56,7 +64,7 @@ body{
 
 .closeIcon{
 
-    color: orange;
+    color: rgb(0, 217, 255);
     font-size: 2rem;
     position: absolute;
     top: 15vh;
@@ -77,7 +85,7 @@ body{
 }
 
 .modalMenu a:hover{
-    color: orange;
+    color: rgb(0, 225, 255);
     font-size: 2.2rem;
 }
 
@@ -95,12 +103,22 @@ body{
 }
 
 .Home{
+    flex-direction: column;
+    justify-content: flex-start;
     /* background-image: url(https://picsum.photos/seed/41/900); */
     background-color: black;
     background-size: cover;
     background-attachment: fixed;
-    gap: 40px;
 
+}
+
+.home_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 100%;
+    width: 100%;
 }
 
 .homeImage{
@@ -116,7 +134,7 @@ body{
 }
 
 .homeText{
-    font-family: 'Bebas Neue';
+    font-family: 'Staatliches';
     font-size: 8rem;
     color: rgb(0, 204, 255);
     animation-name: topToBottom;
@@ -128,13 +146,52 @@ body{
 }
 
 .About{
-    background-image: url(./Aldo0001.png);
-    background-size: cover;
-    background-attachment: fixed;
-    flex-direction: column;
-    justify-content: flex-start !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "box1   box2"
+    "box3   box4"
+    ;
 
 }
+
+.box{
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+
+}
+
+.about_box1{
+    grid-template: box1;
+    font-family: 'Yanone';
+}
+
+.about_box2{
+    grid-template: box2;
+    background-image: url(./walpaper2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 0 0 0 90px;
+}
+
+.about_box3{
+    grid-template: box3;
+    background-image: url(./walpaper2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 0 90px 0 0;
+}
+
+.about_box4{
+    grid-template: box4;
+    font-family: 'Yanone';
+}
+
+
 
 .aboutIcon{
     font-size: 4rem;
@@ -172,10 +229,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0051ffa6;
+    background-color: blue;
     color: white;
     position: sticky;
     top: 10vh;
+    z-index: 80;
+    margin-bottom: auto;
 }
 
 @keyframes topToBottom{

@@ -96,7 +96,8 @@ body{
 }
 .container section{
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,6 +120,7 @@ body{
     gap: 40px;
     height: 100%;
     width: 100%;
+    margin-bottom: auto;
 }
 
 .homeImage{
@@ -144,6 +146,7 @@ body{
     animation-fill-mode: forwards;
     opacity: 0;
 }
+
 
 .About{
     display: grid !important;
@@ -208,10 +211,31 @@ body{
 }
 
 .Showcase{
-    background-image: url(./ggg.png);
-    background-size: cover;
-    background-attachment: fixed;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    font-family: 'Staatliches';
+    color: rgb(0, 3, 153);
+}
 
+.Showcase_title{
+    font-size: 3rem;
+}
+
+.wrapper_Showcase{
+    width: auto;
+    height: auto;
+    text-align: center;
+    padding: 40px 40px;
+}
+
+.wrapper_Showcase img{
+    transition-duration: .5s;
+    border-radius: 30px;
+}
+.wrapper_Showcase img:hover{
+    border-radius: 200px;
+    background-attachment: fixed;
 }
 
 .rotateIcon{
